@@ -1,0 +1,73 @@
+body{
+  background: #000;
+  color: white;
+  font-family: sans-serif;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  
+}
+
+h1{
+  text-shadow: .4rem .2rem  1rem cyan;
+}
+
+.container{
+  max-width: 50rem;
+  height: 100vh;
+  margin: 0 auto;  
+  padding-top: 10rem;
+}
+
+.diagnose{
+  margin-top: 6rem;
+}
+
+.diagnose__form{
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.diagnose__input{
+  width: 20rem;
+  padding: .5rem 1rem ;
+  font-size: 1rem;
+  border-radius: .5rem;
+  display: block;
+  
+}
+.diagnose__result{
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  
+}
+
+.diagnose__button{
+  padding: .5rem 1rem;
+  margin-left: .5rem;
+  background: white;
+  font-size: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.diagnose__button:hover{
+  background: cyan;
+}
+
+.penyakit {
+  border: 1px solid white;
+  padding: 1.5rem 2rem ;
+  border-radius: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.penyakit:hover {
+  box-shadow: 0 0 1rem cyan;
+  cursor: pointer;
+}

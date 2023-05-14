@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Penyakit {
+  id              Int            @id  @default(autoincrement())
+  nama_penyakit   String
+  definisi        String?
+  Penyakit_gejala Penyakit_gejala[]
+}
+
+model Gejala {
+  id              Int       @id @default(autoincrement())
+  gejala          String
+  Penyakit_gejala Penyakit_gejala[]
+}
+
+model Penyakit_gejala {
+  id_relation Int   @id @default(autoincrement())
+  penyakit    Penyakit @relation(fields: [id_penyakit], references: [id])
+  id_penyakit Int 
+  gejala      Gejala   @relation(fields: [id_gejala], references: [id])
+  id_gejala   Int 
+}
